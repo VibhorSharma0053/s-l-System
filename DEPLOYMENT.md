@@ -41,7 +41,7 @@ Vercel is the premier platform for deploying Vite/React applications.
    - **Framework Preset:** Vite
    - **Root Directory:** `frontend`
 4. Open the **Environment Variables** section and add:
-   - `VITE_API_URL` = `<Paste your Render API URL here>` (e.g., `https://solo-leveling-api.onrender.com/api/v1`)
+   - `VITE_API_URL` = `<Paste your Render API URL here>` (e.g., `https://solo-leveling-api.onrender.com/api`)
 5. Click **Deploy**.
 6. Once deployed, copy your new Vercel URL (e.g., `https://solo-leveling-frontend.vercel.app`).
 

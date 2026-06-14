@@ -26,19 +26,7 @@ export default function AuthPage() {
         await register(form.username, form.email, form.password)
       }
     } catch (err) {
-      // If backend is not running, create a demo session
-      if (err.code === 'ERR_NETWORK' || err.response?.status >= 500 || !err.response) {
-        localStorage.setItem('sl_token', 'demo_token')
-        updateUser({
-          username: form.username || 'Hunter',
-          level: 1,
-          job: 'None',
-          title: 'E-Rank Hunter',
-        })
-        window.location.href = '/'
-        return
-      }
-      setError(err.response?.data?.detail || 'Authentication failed')
+      setError(err.response?.data?.detail || err.message || 'Authentication failed')
     } finally {
       setLoading(false)
     }
